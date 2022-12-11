@@ -120,6 +120,10 @@ NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_G3,NOTE_A3,NOTE_
 NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_D3,NOTE_C3,NOTE_B2,NOTE_G2,NOTE_A2,NOTE_G2,NOTE_A2,   NOTE_B2,NOTE_C3,NOTE_D3,NOTE_E3,NOTE_A2,NOTE_E3,NOTE_G3,
 NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_A3,NOTE_B3,   NOTE_C4,NOTE_B3,NOTE_A3,NOTE_G3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_D3,NOTE_C3,NOTE_B2,NOTE_G2,NOTE_A2,NOTE_E3,NOTE_G3,
 };
+
+int tune4[] = {
+A2,A2,A2,A2,A2,A2,A2,A2,   A2,A2,A2,A2,A2,A2,A2,A2,   A2,A2,A2,A2,A2,A2,A2,A2,   A2,A2,A2,A2,A2,A2,A2,A2,
+};
 /****************************************************/
 
 /* 这部分是整首曲子的接拍部分，也定义个序列duration，浮点（数组的个数和前面音符的个数是一样的） */
@@ -136,11 +140,16 @@ float duration3[]= {
 0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,
 0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,
 };
+float duration4[]= {
+0.5+0.25,0.25+0.5,0.5,0.5,0.5+0.25,0.25+0.5,0.5   0.5+0.25,0.25+0.5,0.5,0.5,0.5+0.25,0.25+0.5,0.5   0.5+0.25,0.25+0.5,0.5,0.5,0.5+0.25,0.25+0.5,0.5   0.5+0.25,0.25+0.5,0.5,0.5,0.5+0.25,0.25+0.5,0.5   
+};
+
 /**********************************************************************************/
 
 int length1;     /* 这里定义一个变量，后面用来表示共有多少个音符 */
 int length2; 
 int length3; 
+int length4; 
 int tonePin=12; /* 蜂鸣器的pin */
 int a=0,b=0,c=0,d=0;
 void setup()
@@ -151,6 +160,7 @@ void setup()
   length1 = sizeof(tune1)/sizeof(tune1[0]);
   length2 = sizeof(tune2)/sizeof(tune2[0]);  
   length3 = sizeof(tune3)/sizeof(tune3[0]);  
+  length4 = sizeof(tune4)/sizeof(tune4[0]);  
 }
 
 void loop()
@@ -177,6 +187,13 @@ void loop()
   for(int z=0;z<length3;z++){
     tone(tonePin,tune3[z]);
     delay(500*duration3[z]);
+    noTone(tonePin);
+  }
+ }
+   for(d=0;d<2;d++){
+  for(int w=0;w<length3;w++){
+    tone(tonePin,tune4[w]);
+    delay(500*duration4[w]);
     noTone(tonePin);
   }
  }
