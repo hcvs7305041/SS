@@ -157,10 +157,10 @@ void setup()
   /* 设置蜂鸣器的pin为输出模式 */
   pinMode(tonePin,OUTPUT);
   /* 这里用了一个sizeof函数，可以查出tone序列里有多少个音符 */
-  length1 = sizeof(tune)/sizeof(tune[0]);
-  length2 = sizeof(tune)/sizeof(tune[0]);  
-  length3 = sizeof(tune)/sizeof(tune[0]);  
-  length4 = sizeof(tune)/sizeof(tune[0]);
+  length1 = sizeof(tune1)/sizeof(tune1[0]);
+  length2 = sizeof(tune2)/sizeof(tune2[0]);  
+  length3 = sizeof(tune3)/sizeof(tune3[0]);  
+  length4 = sizeof(tune4)/sizeof(tune4[0]);
 }
 
 void loop()
@@ -179,27 +179,27 @@ void loop()
     noTone(tonePin);
   }
   for(int y=0;y<length2;y++){
-    tone(tonePin,tune2[x]);
-    delay(500*duration2[x]);
+    tone(tonePin,tune2[y]);
+    delay(500*duration2[y]);
     noTone(tonePin);
-    tone(tonePin,tune2[x]);
-    delay(500*duration2[x]);
+    tone(tonePin,tune2[y]);
+    delay(500*duration2[y]);
     noTone(tonePin);
   }
   for(int z=0;z<length3;z++){
-    tone(tonePin,tune3[x]);
-    delay(500*duration3[x]);
+    tone(tonePin,tune3[z]);
+    delay(500*duration3[z]);
     noTone(tonePin);
-    tone(tonePin,tune3[x]);
-    delay(500*duration3[x]);
+    tone(tonePin,tune3[z]);
+    delay(500*duration3[z]);
     noTone(tonePin);
   }
   for(int w=0;w<length4;w++){
-    tone(tonePin,tune4[x]);
-    delay(500*duration4[x]);
+    tone(tonePin,tune4[w]);
+    delay(500*duration4[w]);
     noTone(tonePin);
-    tone(tonePin,tune4[x]);
-    delay(500*duration4[x]);
+    tone(tonePin,tune4[w]);
+    delay(500*duration4[w]);
     noTone(tonePin);
   }
   
