@@ -146,7 +146,10 @@ float duration4[]= {
 };
 /**********************************************************************************/
 
-int length;     /* 这里定义一个变量，后面用来表示共有多少个音符 */
+int length1;     /* 这里定义一个变量，后面用来表示共有多少个音符 */
+int length2; 
+int length3; 
+int length4; 
 int tonePin=12; /* 蜂鸣器的pin */
 int a=0,b=0,c=0,d=0;
 void setup()
