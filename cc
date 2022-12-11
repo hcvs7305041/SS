@@ -166,6 +166,7 @@ void setup()
 void loop()
 {
   /* 循环音符的次数 */
+  for(a=0,a<1,a++){
   for(int x=0;x<length1;x++){
     /* 此函数依次播放tune序列里的数组，即每个音符 */
     tone(tonePin,tune1[x]);
@@ -173,34 +174,29 @@ void loop()
     delay(500*duration1[x]);
     /* 停止当前音符，进入下一音符 */
     noTone(tonePin);
-    
-    tone(tonePin,tune1[x]);
-    delay(500*duration1[x]);
-    noTone(tonePin);
   }
+  }
+  for(b=0,b<1,b++){
   for(int y=0;y<length2;y++){
     tone(tonePin,tune2[y]);
     delay(500*duration2[y]);
     noTone(tonePin);
-    tone(tonePin,tune2[y]);
-    delay(500*duration2[y]);
-    noTone(tonePin);
   }
+  }
+  for(c=0,c<1,c++){
   for(int z=0;z<length3;z++){
     tone(tonePin,tune3[z]);
     delay(500*duration3[z]);
     noTone(tonePin);
-    tone(tonePin,tune3[z]);
-    delay(500*duration3[z]);
-    noTone(tonePin);
   }
+  }
+  
+  for(d=0,d<1,d++){
   for(int w=0;w<length4;w++){
     tone(tonePin,tune4[w]);
     delay(500*duration4[w]);
     noTone(tonePin);
-    tone(tonePin,tune4[w]);
-    delay(500*duration4[w]);
-    noTone(tonePin);
+  }
   }
   
   
