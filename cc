@@ -198,10 +198,6 @@ void loop()
     noTone(tonePin);
   }
   }
-  
-  
-  
-  
   /* 等待5秒，重新开始循环 */
   delay(5000);
 }
