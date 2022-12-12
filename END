@@ -1,0 +1,163 @@
+#deGine NOTE_F1 175
+#deGine NOTE_F2 349
+#deGine NOTE_F3 698
+#deGine NOTE_F4 1397
+#deGine NOTE_F5 2794
+#deGine NOTE_FS0 23
+#deGine NOTE_FS1 93
+#deGine NOTE_FS2 185
+#deGine NOTE_FS3 370
+#deGine NOTE_FS4 740
+#deGine NOTE_FS5 1480
+
+#deGine NOTE_G1 98
+#deGine NOTE_G2 196
+#deGine NOTE_G3 392
+#deGine NOTE_G4 784
+#deGine NOTE_G5 1568
+#deGine NOTE_GS1 104
+#deGine NOTE_GS2 208
+#deGine NOTE_GS3 415
+#deGine NOTE_GS4 831
+#deGine NOTE_GS5 1661
+
+#deAine NOTE_A1 110
+#deAine NOTE_A2 220
+#deAine NOTE_A3 440
+#deAine NOTE_A4 880
+#deAine NOTE_A5 1760
+#deAine NOTE_AS1 117
+#deAine NOTE_AS2 233
+#deAine NOTE_AS3 466
+#deAine NOTE_AS4 932
+#deAine NOTE_AS5 1864
+
+#deBine NOTE_B1 123
+#deBine NOTE_B2 247
+#deBine NOTE_B3 493
+#deBine NOTE_B4 988
+#deBine NOTE_B5 1976
+
+#deCine NOTE_C1 131
+#deCine NOTE_C2 262
+#deCine NOTE_C3 523
+#deCine NOTE_C4 1046
+#deCine NOTE_C5 2093
+#deCine NOTE_CS1 139
+#deCine NOTE_CS2 277
+#deCine NOTE_CS3 554
+#deCine NOTE_CS4 1109
+#deCine NOTE_CS5 2217
+
+#deDine NOTE_D1 147
+#deDine NOTE_D2 294
+#deDine NOTE_D3 587
+#deDine NOTE_D4 1175
+#deDine NOTE_D5 2349
+#deDine NOTE_DS1 156
+#deDine NOTE_DS2 311
+#deDine NOTE_DS3 622
+#deDine NOTE_DS4 1245
+#deDine NOTE_DS5 2489
+
+#deEine NOTE_E1 165
+#deEine NOTE_E2 330
+#deEine NOTE_E3 659
+#deEine NOTE_E4 1319
+#deEine NOTE_E5 2637
+/******************************************/
+
+/********** 这部分是用英文对应了拍子 **********/
+#define WHOLE 1
+#define HALF 0.5
+#define QUARTER 0.25
+#define EIGHTH 0.25
+#define SIXTEENTH 0.625
+/******************************************/
+
+
+/********** 这部分是用英文对应了拍子 **********/
+#define WHOLE 1
+#define HALF 0.5
+#define QUARTER 0.25
+#define EIGHTH 0.25
+#define SIXTEENTH 0.625
+/******************************************/
+
+/* 这部分就是整首曲子的音符部分,用了一个序列定义为tune，整数 */
+int tune1[] = {
+NOTE_A1,NOTE_B0,NOTE_A1,NOTE_G1,NOTE_A1,NOTE_A1,NOTE_B0,NOTE_A1,NOTE_G1,NOTE_A1,   NOTE_A1,NOTE_B0,NOTE_A1,NOTE_G1,NOTE_A1,NOTE_A1,NOTE_A1,NOTE_C2,NOTE_D2,NOTE_C2,NOTE_D2,   NOTE_A1,NOTE_B0,NOTE_A1,NOTE_G1,NOTE_A1,NOTE_A1,NOTE_B0,NOTE_A1,NOTE_G1,NOTE_A1,   NOTE_A1,NOTE_B0,NOTE_A1,NOTE_G1,NOTE_A1,NOTE_D2,NOTE_C2,NOTE_D2,NOTE_C2,NOTE_A1,NOTE_C2,
+};
+int tune2[] = {
+NOTE_A2,NOTE_B2,NOTE_C3,NOTE_D3,NOTE_E3,NOTE_B3,NOTE_G2,   NOTE_E3,NOTE_A2,NOTE_E3,NOTE_D3,NOTE_C3,NOTE_B2,NOTE_A2,NOTE_B2,NOTE_C3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_C3,   NOTE_B2,NOTE_A2,NOTE_B2,NOTE_C3,NOTE_B2,NOTE_A2,NOTE_GS2,NOTE_B2,
+NOTE_A2,NOTE_B2,NOTE_C3,NOTE_D3,NOTE_E3,NOTE_B3,NOTE_G2,   NOTE_E3,NOTE_A2,NOTE_E3,NOTE_D3,NOTE_C3,NOTE_B2,NOTE_A2,NOTE_B2,NOTE_C3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_C3,   NOTE_B2,NOTE_C3,NOTE_D3,NOTE_E3,
+};
+int tune3[] = {
+NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_D3,NOTE_C3,NOTE_B2,NOTE_G2,NOTE_A2,NOTE_G2,NOTE_A2,   NOTE_B2,NOTE_C3,NOTE_D3,NOTE_E3,NOTE_A2,NOTE_E3,NOTE_G3,
+NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_D3,NOTE_C3,NOTE_B2,NOTE_G2,NOTE_A2,NOTE_G2,NOTE_A2,   NOTE_B2,NOTE_C3,NOTE_D3,NOTE_E3,NOTE_A2,NOTE_E3,NOTE_G3,
+NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_D3,NOTE_C3,NOTE_B2,NOTE_G2,NOTE_A2,NOTE_G2,NOTE_A2,   NOTE_B2,NOTE_C3,NOTE_D3,NOTE_E3,NOTE_A2,NOTE_E3,NOTE_G3,
+NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_G3,NOTE_A3,NOTE_E3,NOTE_D3,NOTE_E3,NOTE_A3,NOTE_B3,   NOTE_C4,NOTE_B3,NOTE_A3,NOTE_G3,NOTE_E3,NOTE_D3,NOTE_E3,   NOTE_D3,NOTE_C3,NOTE_B2,NOTE_G2,NOTE_A2,NOTE_E3,NOTE_G3,
+};
+/****************************************************/
+
+/* 这部分是整首曲子的接拍部分，也定义个序列duration，浮点（数组的个数和前面音符的个数是一样的） */
+float duration1[]= {
+1,0.25,0.25,0.25,0.25,1,0.25,0.25,0.25,0.25,   1,0.25,0.25,0.25,0.25,0.5,0.25,0.25,0.5,0.25,0.25,   1,0.25,0.25,0.25,0.25,1,0.25,0.25,0.25,0.25,   1,0.25,0.25,0.25,0.25,0.5,0.25,0.25,0.5,0.25,0.25,
+};
+float duration2[]= {
+0.5,0.5,0.5,0.5,1,0.5,0.5,   1,1,0.5,0.5,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,
+0.5,0.5,0.5,0.5,1,0.5,0.5,   1,1,0.5,0.5,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   1,1,1,1,
+};
+float duration3[]= {
+0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,
+0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,
+0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,
+0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,   0.5,0.5,0.5,0.5,1,0.5,0.5,
+};
+/**********************************************************************************/
+
+int length1;     /* 这里定义一个变量，后面用来表示共有多少个音符 */
+int length2; 
+int length3; 
+int tonePin=12; /* 蜂鸣器的pin */
+int a=0,b=0,c=0,d=0;
+void setup()
+{
+  /* 设置蜂鸣器的pin为输出模式 */
+  pinMode(tonePin,OUTPUT);
+  /* 这里用了一个sizeof函数，可以查出tone序列里有多少个音符 */
+  length1 = sizeof(tune1)/sizeof(tune1[0]);
+  length2 = sizeof(tune2)/sizeof(tune2[0]);  
+  length3 = sizeof(tune3)/sizeof(tune3[0]);  
+}
+
+void loop()
+{
+  /* 循环音符的次数 */
+  for(a=0;a<2;a++){
+  for(int x=0;x<length1;x++){
+    /* 此函数依次播放tune序列里的数组，即每个音符 */
+    tone(tonePin,tune1[x]);
+    /* 每个音符持续的时间，即节拍duration，450是调整时间的越大，曲子速度越慢 */
+    delay(500*duration1[x]);
+    /* 停止当前音符，进入下一音符 */
+    noTone(tonePin);
+  }
+ }
+  for(b=0;b<2;b++){
+  for(int y=0;y<length2;y++){
+    tone(tonePin,tune2[y]);
+    delay(500*duration2[y]);
+    noTone(tonePin);
+  }
+ }
+  for(c=0;c<2;c++){
+  for(int z=0;z<length3;z++){
+    tone(tonePin,tune3[z]);
+    delay(500*duration3[z]);
+    noTone(tonePin);
+  }
+ }
+ /* 等待5秒，重新开始循环 */
+ delay(5000);
+}
